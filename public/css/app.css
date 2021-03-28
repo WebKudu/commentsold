@@ -31432,6 +31432,14 @@ select {
           animation: bounce 1s infinite;
 }
 
+td {
+  padding: 0 12px;
+}
+
+.bright-links a, .bright-links a:hover, .bright-links a:visited, .bright-links a:link {
+  color: #ddd;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

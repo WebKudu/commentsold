@@ -14,19 +14,19 @@ class AddColumnsToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('superadmin');
-            $table->string('shop_name');
+            $table->boolean('superadmin')->default(false);
+            $table->string('shop_name')->default('');
             $table->enum('card_brand',
                          ['Discover', 'Via', 'Amex', 'Mastercard']
-            );
-            $table->string('card_last_four', 4);
-            $table->dateTime('trial_ends_at');
-            $table->string('shop_domain');
-            $table->boolean('is_enabled');
+            )->nullable();
+            $table->string('card_last_four', 4)->default('');
+            $table->dateTime('trial_ends_at')->nullable();
+            $table->string('shop_domain')->default('');
+            $table->boolean('is_enabled')->default(true);
             $table->enum('billing_plan',
                          ['Enterprise', 'Boutique', 'Startup']
-            );
-            $table->dateTime('trial_starts_at');
+            )->nullable();
+            $table->dateTime('trial_starts_at')->nullable();
         });
     }
 

@@ -20,4 +20,14 @@ class Inventory extends Model
     {
         return $this->hasMany(Order::class);
     }
+
+    public function getPriceAttribute(): string
+    {
+        return '$' . number_format($this->price_cents / 100, 2);
+    }
+
+    public function getCostAttribute(): string
+    {
+        return '$' . number_format($this->cost_cents / 100, 2);
+    }
 }
