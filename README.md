@@ -1,7 +1,7 @@
 # Coding Test for CommentSold
 
 This repository is an example of a mini-web application.
-Sumbitted for CommentSold's approval!
+Submitted for CommentSold's approval!
 
 ## Requirements
 * Docker
