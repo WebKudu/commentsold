@@ -5,16 +5,22 @@ Submitted for CommentSold's approval!
 
 ## Requirements
 * Docker
+* Composer
 
 ## How to install
-Clone this repository, cd into the directory
-and type `docker-compose up -d`
+Clone this repository and cd into the directory
+
+`composer install`
+
+`cp .env.example .env`
+
+`./vendor/bin/sail up -d`
 
 This may take a few minutes the first time you run it.
 
-Enter into the docker container `docker exec -it {$docker-id} bash`
+Enter into the "sail-8.0/app" docker container:
 
-`composer install`
+`docker exec -it {$docker-id} bash`
 
 `php artisan migrate`
 
@@ -24,11 +30,10 @@ Enter into the docker container `docker exec -it {$docker-id} bash`
 
 `npm run dev`
 
-`cp .env.example .env`
 
 At that point, open your browser to http://localhost:888 and you should see the app there.
 
 ## How to shut down
 Type `exit` to leave the docker container.
 
-`docker-compose down`
+`./vendor/bin/sail down`
