@@ -5,6 +5,7 @@ Submitted for CommentSold's approval!
 
 ## Requirements
 * Docker
+* PHP >= 7.3
 * Composer
 
 ## How to install
