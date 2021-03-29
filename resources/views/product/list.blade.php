@@ -40,7 +40,9 @@
                         </tbody>
                     </table>
 
-                    <p><strong>Total: {{count($products)}}</strong></p>
+                    <div class="container">
+                        {{$products->links()}}
+                    </div>
                 </div>
             </div>
         </div>

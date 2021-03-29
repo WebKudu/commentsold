@@ -53,7 +53,9 @@
                         </tbody>
                     </table>
 
-                    <p><strong>Total: {{count($inventories)}}</strong></p>
+                    <div class="container">
+                        {{$inventories->links()}}
+                    </div>
                 </div>
             </div>
         </div>

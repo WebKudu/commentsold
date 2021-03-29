@@ -21,7 +21,7 @@ class InventoryController extends Controller
         }
 
         return view('inventory.list', [
-            'inventories' => $inventoryList->get(),
+            'inventories' => $inventoryList->paginate(50),
             'searchString'=> $request->get('search')
         ]);
     }
